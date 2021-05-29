@@ -1,1 +1,19 @@
-Hello world
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block main_content %}
+    <h1 id="welcome-title">Welcome Back!</h1>
+    <section id="grid-container">
+        <div class="grid-item one">
+            Item 1
+        </div>
+        <div class="grid-item two">
+            Item 2
+        </div>
+        <div class="grid-item three">
+            Item 3
+        </div>
+        <div class="grid-item four">
+            Item 4
+        </div>
+    </section>
+{% endblock %}

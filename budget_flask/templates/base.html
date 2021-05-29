@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+    <script src="https://kit.fontawesome.com/2c5a2f151d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- sidebar -->
+    <section id="sidebar">
+        <section class="title-container">
+            <img src="{{ url_for('static', filename='doge.svg') }}" width="40px" alt="logo" />
+            <h1>Budget Dashboard</h1>
+        </section>
+        <section class="links-container">
+            <div class="links">
+                <div class="icon">
+                    <i class="fas fa-house-user"></i>
+                </div>
+                <span>Dashboard</span>
+            </div>
+            <div class="links">
+                <div class="icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <span>Analytics</span>
+            </div>
+            <div class="links">
+                <div class="icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <span>Messages</span>
+            </div>
+            <div class="links">
+                <div class="icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <span>Settings</span>
+            </div>
+        </section>
+    </section>
+    <!-- main content -->
+    <section id="main-content">
+        <section id="top-section">
+            <div class="input-box">
+                <input placeholder="Search..." />
+                <div>
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <div class="action-icons">
+                <div class="action-icon-one"></div>
+                <div class="action-icon-two"></div>
+            </div>
+        </section>
+        {% block main_content %}{% endblock %}
+    </section>
+</body>
+
+</html>
