@@ -5,6 +5,7 @@
     --clr-light: #ffffff;
     --clr-sidebar-dark: #202020;
     --clr-grid-background: #363636;
+    --sidebar-width: 250px;
 
     --background: var(--clr-dark);
     --foreground: var(--clr-light);
@@ -27,7 +28,7 @@ body {
 
 #sidebar {
     background: var(--clr-sidebar-dark);
-    width: 300px;
+    width: var(--sidebar-width);
     height: 100%;
     position: fixed;
     top: 0;
@@ -70,7 +71,7 @@ body {
 }
 
 #main-content {
-    margin-left: 300px;
+    margin-left: var(--sidebar-width);
     box-sizing: border-box;
     height: 100%;
     padding: 20px 25px;

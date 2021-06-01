@@ -5,7 +5,7 @@ from budget_flask.models import *
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('home.html', cash=cash, cc_citi=cc_citi, cc_chase=cc_chase, cc_discover=cc_discover)
 
 @app.route('/test')
 def test():
